@@ -18,7 +18,7 @@ const Header = ({ dark }) => {
   const [ showModal, setShowModal ] = useState(false)
   const [ showModalCart, setShowModalCart ] = useState(false)
   const [ showModalLogin, setShowModalLogin ] = useState(false)
- const [ showModalSign, setShowModalSign ] = useState(false)
+ //const [ showModalSign, setShowModalSign ] = useState(false)
   const [ showModalProfile, setShowModalProfile ] = useState(false)
   const dispatch = useDispatch() // initialize useDispatch
   const [ cartItems, setCartItems ] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') || '') : [])
@@ -104,7 +104,7 @@ const Header = ({ dark }) => {
   }
   const changeModeModal = () => {
     setShowModalLogin(false)
-    setShowModalSign(true)
+    //setShowModalSign(true)
   }
 
   useEffect(() => {
@@ -178,7 +178,7 @@ const Header = ({ dark }) => {
               :
               <button onClick={() => {
                 setShowModal(true)
-                setShowModalSign(false)
+               // setShowModalSign(false)
                 setShowModalLogin(true)
               }} className={[ cls.button, dark ? cls.dark : cls.light ].join(' ')}
               >Login</button>
