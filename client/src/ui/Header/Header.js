@@ -18,7 +18,7 @@ const Header = ({ dark }) => {
   const [ showModal, setShowModal ] = useState(false)
   const [ showModalCart, setShowModalCart ] = useState(false)
   const [ showModalLogin, setShowModalLogin ] = useState(false)
-  const [ showModalSign, setShowModalSign ] = useState(false)
+ const [ showModalSign, setShowModalSign ] = useState(false)
   const [ showModalProfile, setShowModalProfile ] = useState(false)
   const dispatch = useDispatch() // initialize useDispatch
   const [ cartItems, setCartItems ] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') || '') : [])
@@ -28,7 +28,6 @@ const Header = ({ dark }) => {
   const [ dataCart, setDataCart ] = useState([])
   const [ click, setClick ] = useState(0)
   const [ cart, setCart ] = useState([])
-  const [ order, setOrder ] = useState({ orders: [] })
   const [ name, setName ] = useState('')
   const [ email, setEmail ] = useState('')
   const [ password, setPassword ] = useState('')
@@ -43,9 +42,7 @@ const Header = ({ dark }) => {
     error
   } ] = useRegisterUserMutation()
   const [ addOrders, {
-    data:StripeData,
-    error: errorOrders
-  } ] = useAddOrdersMutation()
+    data:StripeData  } ] = useAddOrdersMutation()
 
   useEffect(() => {
     const storedData = localStorage.getItem('cart')
