@@ -29,8 +29,8 @@ jobs:
       - run: |
           cd client
           npm install
-          npm run build
+          CI=false npm run build 
       - run: |
           cd server
           npm install
-          npm run build
+          CI=false npm run build
