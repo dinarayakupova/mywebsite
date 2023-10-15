@@ -12,13 +12,12 @@ import Modal from '../../ui/modal/Modal'
 const MenuPage = () => {
   const {
     data,
-    error,
     isLoading,
     isError
   } = useGetProductsQuery()
   const dispatch = useDispatch() //  useDispatch hook is initialized
   const [ cart, setCart ] = useState([])
-  const [ click, setClick ] = useState(0)
+ // const [ click, setClick ] = useState(0)
   // const cartItems = useSelector((state) => state.auth.cartSlice.items);
   const [ cartItems, setCartItems ] = useState(localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart') || '') : [])
 
@@ -114,7 +113,7 @@ const MenuPage = () => {
       } ])
     }
     dispatch(addToCart(item))
-    setClick(prevState => prevState + 1)
+   // setClick(prevState => prevState + 1)
   }
 
   const handleRemoveFromCart = (itemId, item) => {
@@ -131,7 +130,7 @@ const MenuPage = () => {
       setCartItems([ updatedCart ])
     }
     dispatch(removeFromCart(item))
-    setClick(prevState => prevState + 1)
+   // setClick(prevState => prevState + 1)
 
   }
 

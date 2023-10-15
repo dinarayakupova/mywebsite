@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Layout from '../../ui/Layout/Layout'
 import { useGetOrdersMutation } from '../../api/cartApi'
 import cls from './OrdersPage.module.scss'
@@ -12,7 +12,7 @@ const OrdersPage = () => {
       await getOrders()
     }
     fetchData()
-  }, [])
+  }, [getOrders])
   return (
     <div>
       <Layout dark={true}>
