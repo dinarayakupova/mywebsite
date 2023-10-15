@@ -34,4 +34,4 @@ jobs:
       - run: |
           cd server
           npm install
-          CI=false npm run build
+          CI=false npm run dev
