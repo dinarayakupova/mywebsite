@@ -63,7 +63,7 @@ const Header = ({ dark }) => {
       setUser(data)
     }
 
-  }, [ data ])
+  }, [data, dispatch])
 
   const handleAddToCart = (itemId, item) => {
     const existingCartItemIndex = cart.findIndex(cartItem => cartItem.items.id === itemId)
@@ -117,7 +117,7 @@ const Header = ({ dark }) => {
     }
     setUser(JSON.parse(localStorage.getItem('data')))
 
-  }, [ data ])
+  }, [data, dispatch])
 
   const quantityProduct = (itemId) => {
     if (!Array.isArray(cartItems)) {
