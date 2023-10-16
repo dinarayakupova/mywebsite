@@ -2,9 +2,10 @@
   "name": "jwt-registration",
   "version": "1.0.0",
   "description": "",
-  "main": "nodemon index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "node index.js",
+    "start": "node index"
   },
   "author": "",
   "license": "ISC",
