@@ -9,7 +9,7 @@ const ContactUs = () => {
 
         <div className={cls.mapImgBlock}>
           <div>
-            <h1 className={cls.phoneNumber}>Our number: +1 123 321 3123</h1>
+            <h1 className={cls.phoneNumber}>Our Number is +1 123 321 3123</h1>
             <h1 className={cls.phoneNumber}>Our address: 2353 Rue John Campbell, LaSalle, QC 123 321</h1>
             <div>
               <iframe
