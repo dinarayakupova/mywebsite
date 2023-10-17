@@ -148,7 +148,7 @@ const MenuPage = () => {
         <>
           {!isAuthenticated ? (
             <div className={cls.menuPageWarn}>
-              <h1>Please Register or log in</h1>
+              <h1>Please register or log in</h1>
             </div>
           ) : (
             <>
